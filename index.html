@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>claude-prime</title>
+  <meta name="description" content="Page d'accueil du projet claude-prime.">
+  <style>
+    :root {
+      --fond: #f6f3ee;
+      --texte: #1f1d1a;
+      --discret: #6b665e;
+      --accent: #c2410c;
+      --trait: #ddd6ca;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --fond: #161513;
+        --texte: #f1ede6;
+        --discret: #a39d92;
+        --accent: #fb923c;
+        --trait: #33302b;
+      }
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body { height: 100%; }
+
+    body {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      background: var(--fond);
+      color: var(--texte);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      max-width: 44rem;
+      margin: 0 auto;
+      padding: 3rem 1.25rem;
+    }
+
+    .etiquette {
+      margin: 0 0 1rem;
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0 0 1.25rem;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.75rem, 11vw, 5.5rem);
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      overflow-wrap: anywhere;
+    }
+
+    h1 span { color: var(--accent); }
+
+    .intro {
+      max-width: 32rem;
+      margin: 0 0 2.25rem;
+      color: var(--discret);
+      font-size: 1.125rem;
+    }
+
+    .bouton {
+      align-self: flex-start;
+      padding: 0.75rem 1.4rem;
+      border: 1px solid var(--texte);
+      border-radius: 999px;
+      color: var(--texte);
+      font-weight: 600;
+      text-decoration: none;
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    .bouton:hover,
+    .bouton:focus-visible {
+      background: var(--texte);
+      color: var(--fond);
+    }
+
+    .bouton:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    footer {
+      padding: 1.25rem;
+      border-top: 1px solid var(--trait);
+      color: var(--discret);
+      font-size: 0.875rem;
+      text-align: center;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .bouton { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="etiquette">Bienvenue</p>
+    <h1>claude<span>-</span>prime</h1>
+    <p class="intro">
+      Cette page est le point de départ du projet. Le contenu arrive bientôt.
+    </p>
+    <a class="bouton" href="https://github.com/Danhunt75/claude-prime">Voir le dépôt sur GitHub</a>
+  </main>
+
+  <footer>
+    <p>claude-prime</p>
+  </footer>
+</body>
+</html>
